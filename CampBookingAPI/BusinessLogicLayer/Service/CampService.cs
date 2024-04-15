@@ -40,7 +40,7 @@ namespace BusinessLogicLayer.Service
 
             var availableCamps = allCamps.Where(c => !bookedCampIds.Contains(c.CampId));
                                             
-            return availableCamps.Concat(notBookedCamps);
+            return availableCamps;
         }
 
         public async Task AddCampAsync(Camp camp)

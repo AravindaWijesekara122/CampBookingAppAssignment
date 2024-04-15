@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repository
 
         public async Task<IEnumerable<Camp>> GetAllCampsAsync()
         {
-            return await _dbContext.Camps.Where(b => b.IsBooked == true).ToListAsync();
+            return await _dbContext.Camps.ToListAsync();
         }
 
         public async Task AddCampAsync(Camp camp)
